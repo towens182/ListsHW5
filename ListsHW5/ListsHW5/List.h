@@ -7,10 +7,10 @@ public:
 	~List<datatype>();
 
 
-	void addElement
+	//void addElement
 
 private:
-	//GenericData<datatype> * listhead;
+	datatype * listhead;
 
 
 
