@@ -17,8 +17,9 @@ int main()
 	string input;
 	string inputTest;
 	string::iterator it;
-	//List<int> * intList = new List<int>;
-	//List<string> * stringList = new List<string>;
+
+	List<int> intList;
+	List<string> stringList;
 	
 
 	while (inputTest != "END")
