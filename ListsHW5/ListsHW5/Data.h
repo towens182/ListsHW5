@@ -1,5 +1,5 @@
 #pragma once
-template <class dataObj>
+template<class dataObj>
 class Data
 {
 public:
@@ -31,29 +31,30 @@ inline Data<dataObj>::~Data()
 }
 
 template<class dataObj>
-inline Data * Data<dataObj>::getNext()
+inline Data<dataObj> * Data<dataObj>::getNext()
 {
 	return nextData;
 }
 
 template<class dataObj>
-inline Data * Data<dataObj>::getPrev()
+inline Data<dataObj> * Data<dataObj>::getPrev()
 {
 	return prevData;
 }
+
+
+
 
 template<class dataObj>
 inline void Data<dataObj>::setNext(Data * dataInput)
 {
 	nextData = dataInput;
 }
-
 template<class dataObj>
 inline void Data<dataObj>::setPrev(Data * dataInput)
 {
 	prevData = dataInput;
 }
-
 template<class dataObj>
 inline dataObj Data<dataObj>::getValue()
 {
@@ -65,3 +66,5 @@ inline void Data<dataObj>::setValue(dataObj v)
 {
 	value = v;
 }
+
+

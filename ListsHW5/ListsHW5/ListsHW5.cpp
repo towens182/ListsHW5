@@ -9,7 +9,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-void CheckInput(std::string input);
+void CheckInput(std::string input, List<int> & intList, List<std::string> & stringList);
 
 int main()
 {
@@ -35,7 +35,7 @@ int main()
 		}
 		try
 		{
-			CheckInput(input);			
+			CheckInput(input, intList, stringList);			
 		}
 		catch (string message)
 		{
@@ -43,14 +43,15 @@ int main()
 			cout << message;
 		}
 	}
-
-	//delete intList;
-	//delete stringList;
-
+	system("CLS");
+	cout << "Integer List" << endl;
+	intList.outputList();
+	cout << endl << "String List" << endl;
+	stringList.outputList();
     return 0;
 }
 
-void CheckInput(std::string input)
+void CheckInput(std::string input, List<int> & intList, List<std::string> & stringList)
 {
 	using namespace std;
 	
@@ -85,11 +86,14 @@ void CheckInput(std::string input)
 	if (isalpha(*first))
 	{
 		//add to letter list
+		stringList.addInOrder(input);
 		cout << input << " Added to letter list\n";
 	}
 	else
 	{
+		int numInput = stoi(input);
 		//add to digit list
+		intList.addInOrder(numInput);
 		cout << input << " Added to number list\n";
 	}
 }
